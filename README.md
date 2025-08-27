@@ -1,29 +1,36 @@
 # Deep Learning Starter
 A collection of various deep learning model architectures using TensorFlow, Keras, PyTorch and Lightning AI
 
-## Environment setup
-1. Create a Python virtual environment.
+## Install Python 3.12
+https://www.python.org/downloads/
+
+Linux
 ```
-python -m venv .venv
+sudo apt install python3 python3-pip python3-venv -y
 ```
 
-2. Activate the virtual environment.
+## Environment setup
+1. Install required packages in a Python virtual environment.
 
 Windows
 ```
-.\.venv\Scripts\activate
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
 ```
 
 Linux
 ```
-source ./.venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
+pip3 install -r requirements.txt
 ```
 
-3. Install the required packages.
-```
-pip install -r requirements.txt
-```
+2. Install Jupyter Notebook extention in Visual Studio Code.
 
-4. Install Jupyter Notebook extention in Visual Studio Code.
+3. Set the VS Code Runtime as the virtual environment and Run the scripts.
 
-5. Set the VS Code Runtime as the virtual environment and Run the scripts.
+## GPU Support Check
+```
+python scripts\gpu_support_check.py
+```
