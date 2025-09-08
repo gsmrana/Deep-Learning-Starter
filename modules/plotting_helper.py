@@ -9,8 +9,8 @@ from matplotlib.colors import ListedColormap
 def plot_feature2d(
     X_train, 
     y_train, 
-    bias=None, 
-    weights=None,
+    bias=0, 
+    weights=[],
     x1_min=-20,
     x1_max=20,
     markersize=4,
@@ -34,10 +34,13 @@ def plot_feature2d(
     )
     
     # plot 2d line
-    if bias and len(weights) >= 2:
-        x2_min = (-(weights[0] * x1_min) - bias) / weights[1]
-        x2_max = (-(weights[0] * x1_max) - bias) / weights[1]
-        plt.plot([x1_min, x1_max], [x2_min, x2_max], color="k")
+    if len(weights) >= 2 and weights[1] != 0:
+            x2_min = (-(weights[0] * x1_min) - bias) / weights[1]
+            x2_max = (-(weights[0] * x1_max) - bias) / weights[1]
+            plt.plot([x1_min, x1_max], [x2_min, x2_max], color="k", linestyle="--")
+    elif len(weights) >= 1 and weights[0] != 0: # vertical line
+        x_v = -bias / weights[0]
+        plt.axvline(x=x_v, color="k", linestyle="--")
     
     plt.xlabel("Feature $x_1$", fontsize=12)
     plt.ylabel("Feature $x_2$", fontsize=12)
