@@ -1,5 +1,12 @@
-import torch
+print("================= Platform Info =================")
+import platform
+print("Python:", platform.python_version())
+print("Platform:", platform.platform())
+print()
+
 print("============== PyTorch GPU support ==============")
+import torch
+print("PyTorch:", torch.__version__)
 print("CUDA Available:", torch.cuda.is_available())
 print(f"Number of GPUs: {torch.cuda.device_count()}")
 
@@ -13,8 +20,9 @@ if torch.cuda.is_available():
 print()
 
 
+print("============== TensorFlow GPU support ==============")
 import tensorflow as tf
-print("\n============== TensorFlow GPU support ==============")
+print("TensorFlow:", tf.__version__)
 print("Built with CUDA:", tf.test.is_built_with_cuda())
 
 print("\nNumber of Physical Device:", len(tf.config.list_physical_devices('GPU')))

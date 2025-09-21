@@ -30,7 +30,7 @@ pip3 install -r requirements.txt
 
 3. Set the VS Code Runtime as the virtual environment and Run the scripts.
 
-## GPU Support Check
+## GPU support check
 ```
 python scripts\gpu_support_check.py
 ```
