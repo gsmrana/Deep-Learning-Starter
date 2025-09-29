@@ -17,5 +17,6 @@ tensorflow-datasets==4.9.9
 --extra-index-url https://download.pytorch.org/whl/cu126
 torch==2.8.0+cu126
 torchaudio==2.8.0+cu126
+torchinfo==1.8.0
 torchmetrics==1.8.2
 torchvision==0.23.0+cu126
