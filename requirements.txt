@@ -1,3 +1,4 @@
+ipywidgets==8.1.7
 lightning==2.5.5
 matplotlib==3.10.6
 mlxtend==0.23.4
@@ -6,13 +7,14 @@ numpy==2.3.3
 pandas==2.3.2
 scikit-learn==1.7.2
 seaborn==0.13.2
-transformers==4.56.2
 
 #tensorflow==2.10   # support gpu on native windows with pyton 3.9 and CUDA/cuDNN
 #tensorflow[and-cuda]==2.20.0  # support gpu on Linux/WSL2
 tensorflow==2.20.0
 tensorboard==2.20.0
 tensorflow-datasets==4.9.9
+#tf-keras==2.20.1
+#transformers==4.57.1
 
 --extra-index-url https://download.pytorch.org/whl/cu126
 torch==2.8.0+cu126
@@ -20,3 +22,10 @@ torchaudio==2.8.0+cu126
 torchinfo==1.8.0
 torchmetrics==1.8.2
 torchvision==0.23.0+cu126
+
+bitsandbytes==0.48.1
+evaluate==0.4.6
+huggingface_hub[hf_xet]==0.34.4
+peft==0.17.1
+sentencepiece==0.2.1
+transformers[torch]==4.57.1
